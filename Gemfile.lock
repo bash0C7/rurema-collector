@@ -1,0 +1,57 @@
+GIT
+  remote: https://github.com/rurema/bitclust.git
+  revision: fa0a38eb88bf9f693e50335956c78b504ff7f9eb
+  specs:
+    bitclust-core (1.4.0)
+      drb
+      json
+      nkf
+      progressbar (>= 1.9.0, < 2.0)
+      rack
+      webrick
+
+PATH
+  remote: .
+  specs:
+    rurema (0.1.0)
+      bitclust-core
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    drb (2.2.3)
+    json (2.19.3)
+    nkf (0.2.0)
+    power_assert (3.0.1)
+    progressbar (1.13.0)
+    rack (3.2.6)
+    rake (13.3.1)
+    test-unit (3.7.7)
+      power_assert
+    webrick (1.9.2)
+
+PLATFORMS
+  arm64-darwin-24
+  ruby
+
+DEPENDENCIES
+  bitclust-core!
+  rake
+  rurema!
+  test-unit
+
+CHECKSUMS
+  bitclust-core (1.4.0)
+  drb (2.2.3) sha256=0b00d6fdb50995fe4a45dea13663493c841112e4068656854646f418fda13373
+  json (2.19.3) sha256=289b0bb53052a1fa8c34ab33cc750b659ba14a5c45f3fcf4b18762dc67c78646
+  nkf (0.2.0) sha256=fbc151bda025451f627fafdfcb3f4f13d0b22ae11f58c6d3a2939c76c5f5f126
+  power_assert (3.0.1) sha256=8ce9876716cc74e863fcd4cdcdc52d792bd983598d1af3447083a3a9a4d34103
+  progressbar (1.13.0) sha256=18c921d1c527dbe7eba3c5a07a1e3bcdd5e42fc18276f5711187a7489448be78
+  rack (3.2.6) sha256=5ed78e1f73b2e25679bec7d45ee2d4483cc4146eb1be0264fc4d94cb5ef212c2
+  rake (13.3.1) sha256=8c9e89d09f66a26a01264e7e3480ec0607f0c497a861ef16063604b1b08eb19c
+  rurema (0.1.0)
+  test-unit (3.7.7) sha256=3c89d5ff0690a16bef9946156c4624390402b9d54dfcf4ce9cbd5b06bead1e45
+  webrick (1.9.2) sha256=beb4a15fc474defed24a3bda4ffd88a490d517c9e4e6118c3edce59e45864131
+
+BUNDLED WITH
+  4.0.3
