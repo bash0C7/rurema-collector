@@ -1,5 +1,5 @@
 Gem::Specification.new do |spec|
-  spec.name          = 'rurema'
+  spec.name          = 'rurema_collector'
   spec.version       = '0.1.0'
   spec.summary       = 'rurema collector for ruby knowledge DB'
   spec.authors       = ['bash0C7']

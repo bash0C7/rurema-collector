@@ -1,6 +1,6 @@
 require 'open3'
 
-module Rurema
+module RuremaCollector
   class DoctreeManager
     RUREMA_REPO = 'https://github.com/rurema/doctree.git'
 

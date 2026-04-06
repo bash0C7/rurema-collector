@@ -1,7 +1,7 @@
 require 'bitclust/rrdparser'
 require_relative 'doctree_manager'
 
-module Rurema
+module RuremaCollector
   class Collector
     SOURCE_PREFIX = 'rurema/doctree'
 
@@ -52,14 +52,14 @@ module Rurema
         results << { content: cls_src, source: class_source(library_entry.name, class_entry.name) }
       end
     rescue => e
-      warn "[Rurema::Collector] skip #{path}: #{e.class}: #{e.message}"
+      warn "[RuremaCollector::Collector] skip #{path}: #{e.class}: #{e.message}"
     end
 
     class DefaultRDParser
       def parse(path, version)
         BitClust::RRDParser.parse_stdlib_file(path, { 'version' => version })
       rescue => e
-        warn "[Rurema::DefaultRDParser] parse error #{path}: #{e.class}: #{e.message}"
+        warn "[RuremaCollector::DefaultRDParser] parse error #{path}: #{e.class}: #{e.message}"
         nil
       end
     end

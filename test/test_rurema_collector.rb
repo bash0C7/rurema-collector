@@ -1,5 +1,5 @@
 require_relative 'test_helper'
-require_relative '../lib/rurema/collector'
+require_relative '../lib/rurema_collector/collector'
 
 FakeClassEntry = Struct.new(:name, :source)
 
@@ -53,7 +53,7 @@ end
 
 class TestRuremaCollector < Test::Unit::TestCase
   def setup
-    @collector = Rurema::Collector.new(
+    @collector = RuremaCollector::Collector.new(
       { 'doctree_path' => '/fake/doctree', 'version' => '3.3.0' },
       doctree_manager: StubDoctreeManager.new,
       rd_parser:       StubRDParser.new
@@ -87,7 +87,7 @@ class TestRuremaCollector < Test::Unit::TestCase
   end
 
   def test_nil_from_parser_is_skipped
-    collector = Rurema::Collector.new(
+    collector = RuremaCollector::Collector.new(
       { 'doctree_path' => '/fake', 'version' => '3.3.0' },
       doctree_manager: StubDoctreeManager.new,
       rd_parser:       StubRDParserReturnsNil.new
@@ -96,7 +96,7 @@ class TestRuremaCollector < Test::Unit::TestCase
   end
 
   def test_parse_error_is_skipped
-    collector = Rurema::Collector.new(
+    collector = RuremaCollector::Collector.new(
       { 'doctree_path' => '/fake', 'version' => '3.3.0' },
       doctree_manager: StubDoctreeManager.new,
       rd_parser:       StubRDParserRaises.new
@@ -106,7 +106,7 @@ class TestRuremaCollector < Test::Unit::TestCase
   end
 
   def test_empty_source_string_is_not_collected
-    collector = Rurema::Collector.new(
+    collector = RuremaCollector::Collector.new(
       { 'doctree_path' => '/fake', 'version' => '3.3.0' },
       doctree_manager: StubDoctreeManager.new,
       rd_parser:       StubRDParserEmptySource.new
