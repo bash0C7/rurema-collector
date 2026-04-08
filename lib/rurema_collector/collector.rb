@@ -52,7 +52,7 @@ module RuremaCollector
         results << { content: cls_src, source: class_source(library_entry.name, class_entry.name) }
       end
     rescue => e
-      warn "[RuremaCollector::Collector] skip #{path}: #{e.class}: #{e.message}"
+      warn "[RuremaCollector::Collector] unexpected error processing #{path}: #{e.class}: #{e.message}"
     end
 
     class DefaultRDParser
